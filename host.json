@@ -11,6 +11,10 @@
         "default": "Information"
       }
     },
+    "extensionBundle": {
+      "id": "Microsoft.Azure.Functions.ExtensionBundle",
+      "version": "[3.*, 4.0.0)"
+    },
     "customHandler": {
       "description": {
         "defaultExecutablePath": "node",

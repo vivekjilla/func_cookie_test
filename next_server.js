@@ -12,11 +12,14 @@ try {
     const cookies = req.headers["cookie"];
     console.log(req.headers)
     console.log("req cookies: "+ cookies);
+    console.log("req url: "+ req.url);
 
-    if(!cookies){
+    if(req.url != "/"){
+        const time = Date.now()
+        const reqpath = req.url;
         // To Write a Cookie
         res.writeHead(200, {
-            "Set-Cookie": `bucket-home=z`,
+            "Set-Cookie": reqpath +`=`+time,
             "Content-Type": `text/plain`
         });
         console.log("setting response cookies")
